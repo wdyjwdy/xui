@@ -27,6 +27,7 @@ dist-ssr
 src
 public
 .eslintrc.cjs
+.gitignore
 index.html
 package-lock.json
 package.json
