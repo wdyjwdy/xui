@@ -27,7 +27,7 @@ const Button = ({
   primary=false,
   disable=false,
   href,
-  className,
+  className='',
   onClick,
 } : ButtonProps) => {
   const buttonBodyColor = buttonBodyColors[type]
@@ -44,7 +44,7 @@ const Button = ({
         ${primary ? buttonBodyColor : ''}
         ${buttonBorderColor}
         ${disable ? 'disable text-slate-400' : ''}
-        ${className ? className : ''}
+        ${className}
       `}
       onClick={handleClick}
     >
