@@ -35,7 +35,7 @@ const Input = ({
   }
 
   return (
-    <div>
+    <div className="flex gap-2">
       <label className="text-2xl">{label}</label>
       <div className={width === 'middle' ? 'w-80 flex' : 'w-40 flex'}>
         {prefix && (
