@@ -41,28 +41,29 @@ const Input = ({
         {prefix && (
           <input
             size={4}
-            value={prefix}
+            defaultValue={prefix}
             disabled={!prefixEnable}
             className="rounded-l-lg px-3 text-2xl border-2 dark:bg-slate-700 dark:border-slate-500"
           />
         )}
         <input
           type={type}
-          value={value}
+          defaultValue={value}
           disabled={disabled}
           onChange={onChange}
           onKeyDown={handleKeyDown}
           className={`px-3 text-2xl border-2 w-full dark:bg-slate-700 dark:border-slate-500
             ${className}
             ${(!prefix && !suffix) && 'rounded-lg'}
-            ${(!prefix && suffix) && 'rounded-l-lg'}
-            ${(prefix && !suffix) && 'rounded-r-lg'}
+            ${(!prefix && suffix) && 'rounded-l-lg border-r-0'}
+            ${(prefix && !suffix) && 'rounded-r-lg border-l-0'}
+            ${(prefix && suffix) && 'border-x-0'}
           `}
         />
         {suffix && (
           <input
             size={4}
-            value={suffix}
+            defaultValue={suffix}
             disabled={!suffixEnable}
             className="rounded-r-lg px-3 text-2xl border-2 dark:bg-slate-700 dark:border-slate-500"
           />
