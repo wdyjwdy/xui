@@ -43,7 +43,7 @@ const Input = ({
             size={4}
             value={prefix}
             disabled={!prefixEnable}
-            className="rounded-l-lg px-3 text-2xl border-2"
+            className="rounded-l-lg px-3 text-2xl border-2 dark:bg-slate-700 dark:border-slate-500"
           />
         )}
         <input
@@ -52,7 +52,7 @@ const Input = ({
           disabled={disabled}
           onChange={onChange}
           onKeyDown={handleKeyDown}
-          className={`px-3 text-2xl border-2 w-full
+          className={`px-3 text-2xl border-2 w-full dark:bg-slate-700 dark:border-slate-500
             ${className}
             ${(!prefix && !suffix) && 'rounded-lg'}
             ${(!prefix && suffix) && 'rounded-l-lg'}
@@ -64,7 +64,7 @@ const Input = ({
             size={4}
             value={suffix}
             disabled={!suffixEnable}
-            className="rounded-r-lg px-3 text-2xl border-2"
+            className="rounded-r-lg px-3 text-2xl border-2 dark:bg-slate-700 dark:border-slate-500"
           />
         )}
       </div>
